@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title">
+        {{detailObj.title}}
+    </text>
+    <image style="width:100%;height: 200px;" src="{{detailObj.thumbnail_pic_s}}"></image>
+    <richtext>{{detailObj.content}}</richtext>
+</div>

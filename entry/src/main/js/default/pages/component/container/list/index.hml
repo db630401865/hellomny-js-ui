@@ -1,0 +1,58 @@
+<div class="container">
+    <text class="title">
+        {{ title }}
+    </text>
+
+    <text class="list-header">水平列表</text>
+    <list class="list-h">
+        <list-item for="{{ users }}">
+            <text class="list-text">{{$item}}</text>
+        </list-item>
+    </list>
+
+    <text class="list-header">垂直列表</text>
+    <list class="list-v">
+        <list-item for="{{ users }}">
+            <text class="list-text">{{$item}}</text>
+        </list-item>
+    </list>
+
+    <list style="width: 100%;" id="mylist">
+        <list-item class="top-list-item" clickeffect="false">
+            <div class="item-div">
+                <div class="item-child">
+                    <button type="capsule" value="合并第一个" onclick="collapseOne"></button>
+                    <button type="capsule" value="展开第一个" onclick="expandOne"></button>
+                </div>
+                <div class="item-child">
+                    <button type="capsule" value="合并全部" onclick="collapseAll"></button>
+                    <button type="capsule" value="展开全部" onclick="expandAll"></button>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item-group for="u in usersGroup"
+                         id="{{u.country}}"
+                         ongroupcollapse="collapse"
+                         ongroupexpand="expand">
+            <list-item type="item"
+                       style="background-color: #87CEFA;height:60px;"
+                       primary="true"
+                    >
+                <div class="item-group-child">
+                    <text>{{u.country}}</text>
+                </div>
+            </list-item>
+
+            <list-item type="item"
+                       style="background-color:#FFF0F5;height:50px;"
+                       for="u.users"
+                    >
+                <div class="item-group-child">
+                    <text>{{$item}}</text>
+                </div>
+            </list-item>
+
+        </list-item-group>
+    </list>
+</div>

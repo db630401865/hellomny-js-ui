@@ -1,0 +1,41 @@
+<div class="container">
+    <text>折线图</text>
+    <stack class="chart-region">
+        <image class="chart-background" src="common/images/Wallpaper.png"></image>
+        <chart class="chart-data"
+               type="line"
+               ref="linechart"
+               options="{{lineOps}}"
+               datasets="{{lineData}}"></chart>
+    </stack>
+    <button value="Add data" 
+            type="capsule"
+            onclick="addData"></button>
+
+    <text>柱状图</text>
+    <stack class="data-region">
+        <image class="data-background" src="common/images/Wallpaper.png"></image>
+        <chart class="data-bar"
+               type="bar"
+               id="bar-chart"
+               options="{{barOps}}"
+               datasets="{{barData}}"></chart>
+    </stack>
+
+    <text>量规图</text>
+    <div class="gauge-region">
+        <chart class="data-gauge"
+               type="gauge"
+               percent="50"></chart>
+    </div>
+
+    <text>progress</text>
+    <stack class="data-region">
+        <image class="data-background" src="common/images/Wallpaper.png"></image>
+        <chart class="data-bar"
+               type="progress"
+               id="progress-chart"
+               segments="{{segmentsData}}"
+               ></chart>
+    </stack>
+</div>

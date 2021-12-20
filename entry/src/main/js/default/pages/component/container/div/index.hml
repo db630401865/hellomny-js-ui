@@ -1,0 +1,17 @@
+<div class="container">
+    <text class="title">
+        Div {{ title }}
+    </text>
+    <div class="common grid-parent">
+        <div class="grid-child grid-left-top"></div>
+        <div class="grid-child grid-left-bottom"></div>
+        <div class="grid-child grid-right-top"
+                onlongpress="longPressCallback"
+                onswipe="swipeCallback" >
+            <text>
+                <span>target</span>
+            </text>
+        </div>
+        <div class="grid-child grid-right-bottom"></div>
+    </div>
+</div>

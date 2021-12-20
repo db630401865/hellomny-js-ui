@@ -1,0 +1,100 @@
+{
+  "app": {
+    "bundleName": "com.example.hellomny",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true,
+        "securityConfig": {
+          "domainSettings": {
+            "cleartextPermitted": true,
+            "domains": [
+              {
+                "subdomains": true,
+                "name": "devapi.qweather.com",
+              },
+              {
+                "subdomains": true,
+                "name": "v.juhe.cn"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "module": {
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.LOCATION"
+      }
+    ],
+    "package": "com.example.hellomny",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.hellomny.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.example.hellomny.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/news/news",
+          "pages/profile/index",
+          "pages/component/component",
+          "pages/component/container/div/index",
+          "pages/component/container/dialog/index",
+          "pages/component/container/list/index",
+          "pages/component/container/swiper/index",
+          "pages/component/basic/toolbar/index",
+          "pages/component/basic/chart/index",
+          "pages/component/basic/picker/index",
+          "pages/component/basic/input/index",
+          "pages/newsdetail/newsdetail"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+<div class="container">
+    <slot name="top"></slot>
+    <text>
+        <span>这里是页脚</span>
+    </text>
+    <slot></slot>
+    <text onclick="companyInfo">
+        {{ company }}
+    </text>
+    <slot name="bottom"></slot>
+</div>

@@ -1,0 +1,37 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chart-region {
+    height: 400px;
+    width: 700px;
+}
+.chart-background {
+    object-fit: fill;
+}
+.chart-data {
+    width: 700px;
+    height: 600px;
+}
+
+.data-region {
+    height: 400px;
+    width: 700px;
+}
+.data-background {
+    object-fit: fill;
+}
+.data-bar {
+    width: 700px;
+    height: 400px;
+}
+
+.gauge-region {
+    height: 400px;
+    width: 400px;
+}
+.data-gauge {
+    colors: #83f115, #fd3636, #3bf8ff;
+    weights: 4, 2, 2;
+}

@@ -1,0 +1,29 @@
+<element name="footer" src="../../common/components/footer/index.hml"></element>
+<element name="bottomNav" src="../../common/components/bottomNav/index.hml"></element>
+
+<div class="container">
+    <text class="title">
+        Hello {{ title }}
+    </text>
+    <list>
+        <block for="glasses">
+            <list-item type="glasses">
+                <text>{{$item.name}}</text>
+            </list-item>
+            <block for="$item.kinds">
+                <list-item type="kind">
+                    <text>{{$item.name}} {{$item.color}}</text>
+                </list-item>
+            </block>
+        </block>
+    </list>
+
+    <footer company="拉勾教育123" @check-info="companyInfo">
+        <text>默认内容</text>
+
+        <text slot="bottom">底部内容</text>
+        <text slot="top">顶部内容</text>
+    </footer>
+
+    <bottomNav cur-index="3"></bottomNav>
+</div>

@@ -1,0 +1,50 @@
+<element name="bottomNav" src="../../common/components/bottomNav/index.hml"></element>
+
+
+<div class="container">
+    <tabs class="tabs" index="0" vertical="false" onchange="change">
+        <tab-bar class="tab-bar" mode="fixed">
+            <text class="tab-text">容器组件</text>
+            <text class="tab-text">基础组件</text>
+            <text class="tab-text">其他</text>
+        </tab-bar>
+        <tab-content class="tabcontent" scrollable="true">
+            <div class="item-content" >
+                <button data="0" type="capsule" onclick="goComp">
+                    div
+                </button>
+                <button data="1" type="capsule" onclick="goComp">
+                    dialog
+                </button>
+                <button data="2" type="capsule" onclick="goComp">
+                    list
+                </button>
+                <button data="3" type="capsule" onclick="goComp">
+                    swiper
+                </button>
+            </div>
+            <div class="item-content" >
+                <button data="4" type="capsule" onclick="goComp">
+                    toolbar
+                </button>
+                <button data="5" type="capsule" onclick="goComp">
+                    chart
+                </button>
+                <button data="6" type="capsule" onclick="goComp">
+                    picker
+                </button>
+                <button data="7" type="capsule" onclick="goComp">
+                    input
+                </button>
+            </div>
+            <div class="item-content" >
+                <text class="item-title">Third screen</text>
+            </div>
+        </tab-content>
+    </tabs>
+    <button onclick="goBack" type="capsule">
+        回退
+    </button>
+
+    <bottomNav cur-index="2"></bottomNav>
+</div>

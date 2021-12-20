@@ -1,0 +1,27 @@
+<div class="container">
+    <text class="title">
+        {{ title }}
+    </text>
+    <swiper class="swiper" 
+            id="swiper" 
+            index="0" 
+            indicator="true" 
+            loop="true" 
+            digital="false"
+            autoplay="true"
+            vertical="true"
+            >
+        <div class = "swiperContent" >
+            <image src="/common/images/bg-tv.jpg"></image>
+        </div>
+        <div class = "swiperContent">
+            <image src="/common/images/wall.jpg"></image>
+        </div>
+        <div class = "swiperContent">
+            <image src="/common/images/sky.jpg"></image>
+        </div>
+    </swiper>
+    <input class="button" type="button" value="swipeTo" onclick="swipeTo"></input>
+    <input class="button" type="button" value="showNext" onclick="showNext"></input>
+    <input class="button" type="button" value="showPrevious" onclick="showPrevious"></input>
+</div>

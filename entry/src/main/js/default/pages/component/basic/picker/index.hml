@@ -1,0 +1,67 @@
+<div class="container">
+    <text class="title">
+        {{ title }}
+    </text>
+
+    <picker id="picker_text"
+            type="text"
+            value="{{textvalue}}"
+            selected="{{textselect}}"
+            range="{{rangetext}}"
+            onchange="textonchange"
+            oncancel="textoncancel"
+            class="pickertext"></picker>
+
+    <picker id="picker_date"
+            type="date"
+            value="{{datevalue}}"
+            start="2002-2-5"
+            end="2030-6-5"
+            selected="{{dateselect}}"
+            lunarswitch="true"
+            onchange="dateonchange"
+            oncancel="dateoncancel"
+            class="pickerdate"></picker>
+
+    <picker id="picker_time"
+            type="time"
+            value="{{timevalue}}"
+            containsecond="{{containsecond}}"
+            selected="{{timeselect}}"
+            hours="12"
+            onchange="timeonchange"
+            oncancel="timeoncancel"
+            class="pickertime"></picker>
+
+    <picker id="picker_datetime"
+            type="datetime"
+            value="{{datetimevalue}}"
+            selected="{{datetimeselect}}"
+            hours="24"
+            lunarswitch="true"
+            onchange="datetimeonchange"
+            oncancel="datetimeoncancel"
+            class="pickerdatetime"></picker>
+
+    <picker id="picker_muitl"
+            type="multi-text"
+            value="{{multitextvalue}}"
+            columns="2"
+            range="{{multitext}}"
+            selected="{{multitextselect}}"
+            onchange="multitextonchange"
+            oncancel="multitextoncancel"
+            class="pickermuitl"></picker>
+
+    <div class="container">
+        <text class="title">
+            Selected：{{time}}
+        </text>
+        <picker-view
+                class="time-picker"
+                type="time"
+                selected="{{defaultTime}}"
+                @change="handleChange"
+                ></picker-view>
+    </div>
+</div>

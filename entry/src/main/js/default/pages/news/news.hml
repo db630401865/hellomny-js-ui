@@ -1,0 +1,36 @@
+<element name="bottomNav" src="../../common/components/bottomNav/index.hml"></element>
+
+
+<div class="container">
+    <tabs class="tabs" index="0" vertical="false" onchange="change">
+        <tab-bar class="tab-bar" mode="scrollable">
+            <text class="tab-text" for="{{news}}">{{$item.title}}</text>
+        </tab-bar>
+        <tab-content class="tabcontent" scrollable="true">
+            <div class="item-content" for="{{news}}">
+                <list class="list" if="{{$item.list.length}}">
+                    <list-item for="{{$item.list}}"
+                               class="list-item"
+                               onclick="clickItem($item.uniquekey)" >
+                        <image src="{{$item.thumbnail_pic_s}}" class="list-image"></image>
+                        <div class="content">
+                            <text class="list-text list-title">
+                                {{$item.title}}
+                            </text>
+                            <text class="list-meta" focusable="true">
+                                {{$item.author_name}}
+                            </text>
+                            <text class="list-text" focusable="true">
+                                {{$item.date}}
+                            </text>
+                        </div>
+                        <image class="right-image" src="/common/icons/right_active.png">
+                        </image>
+                    </list-item>
+                </list>
+            </div>
+        </tab-content>
+    </tabs>
+
+    <bottomNav cur-index="1"></bottomNav>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="btn-div">
+        <button type="capsule"
+                value="注册"
+                class="btn"
+                onclick="showDialog"></button>
+    </div>
+    <dialog id="loginDialog">
+        <div class="loginDialog">
+            <div class="formItem">
+                <input id="phoneInput"
+                       type="number"
+                       placeholder="请输入手机号"
+                       onchange="inputPhone"></input>
+            </div>
+            <div class="formItem">
+                <input id="pwdInput"
+                       type="password"
+                       placeholder="请输入密码"
+                       onchange="inputPwd"></input>
+            </div>
+            <button class="inputBtn"
+                    onclick="register">注册</button>
+        </div>
+    </dialog>
+</div>

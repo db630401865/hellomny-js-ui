@@ -1,0 +1,9 @@
+<toolbar style="position: fixed; bottom: 0px; ">
+    <toolbar-item
+            for="{{ menu }}"
+            tid="id"
+            icon='{{$item.icon}}'
+            value='{{$item.name}}'
+            onclick="changeNav($idx)"
+            >   </toolbar-item>
+</toolbar>

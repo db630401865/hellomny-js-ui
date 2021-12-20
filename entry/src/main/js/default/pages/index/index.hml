@@ -1,0 +1,39 @@
+<element name="bottomNav" src="../../common/components/bottomNav/index.hml"></element>
+
+<div class="container">
+    <text class="title" style="color: #2129D9;">
+        {{ $t('strings.hello') }} : {{ title }} {{ $t('strings.settings') }}
+    </text>
+
+    <image-animator
+            class="image-player"
+            id="animator"
+            images="{{images}}"
+            duration="1s"
+            onclick="handleClick"></image-animator>
+
+    <list class="tag-list">
+        <list-item for="{{ threeDays }}" class="weather-item">
+            <div class="item-header">
+                <text>{{$item.fxDate}}</text>
+                <text>{{$item.tempMin}}° - {{$item.tempMax}}°</text>
+            </div>
+            <div class="item-body">
+                <image class="weather-icon" src="../../common/weather/{{$item.iconDay}}.png"></image>
+                <div>
+                    <text>{{ $item.textDay }}</text>
+                    <text>{{ $item.windDirDay }}: {{$item.windScaleDay}}</text>
+                </div>
+            </div>
+        </list-item>
+    </list>
+
+    <button type="capsule" onclick="setValue">
+        设置
+    </button>
+    <button type="capsule" onclick="getValue">
+        获取
+    </button>
+
+    <bottomNav cur-index="0"></bottomNav>
+</div>

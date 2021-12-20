@@ -1,0 +1,32 @@
+<toolbar style="position: fixed; bottom: 0px; ">
+    <toolbar-item
+            icon='common/icons/home.png'
+            value='首页'
+            onclick="changeNav(0)"
+            >   </toolbar-item>
+    <toolbar-item
+            icon='common/icons/add.png'
+            value='添加'
+            onclick="changeNav(1)"
+            >   </toolbar-item>
+    <toolbar-item
+            icon='common/icons/comment.png'
+            value='新闻'
+            onclick="changeNav(2)"
+            >   </toolbar-item>
+    <toolbar-item
+            icon='common/icons/user.png'
+            value='我'
+            onclick="changeNav(3)"
+            >   </toolbar-item>
+    <toolbar-item
+            icon='common/icons/profile.png'
+            value='编辑'
+            onclick="changeNav(4)"
+            >   </toolbar-item>
+    <toolbar-item
+            icon='common/icons/cart.png'
+            value='购物车'
+            onclick="changeNav(5)"
+            >   </toolbar-item>
+</toolbar>
